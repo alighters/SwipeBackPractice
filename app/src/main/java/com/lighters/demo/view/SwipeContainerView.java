@@ -66,16 +66,16 @@ public class SwipeContainerView extends FrameLayout {
     @Override
     protected boolean drawChild(Canvas canvas, View child, long drawingTime) {
         boolean result = super.drawChild(canvas, child, drawingTime);
-        if (getChildView() != null && getChildView().getLeft() > 0) {
-            canvas.clipRect(0, 0, getChildView().getLeft(), getChildView().getHeight());
-            canvas.drawColor(Color.TRANSPARENT);
-        }
-        if (getChildView().getLeft() > 0 && getChildView().getLeft() >= getChildView().getWidth() + getChildView().getPaddingLeft() + getChildView().getPaddingBottom()) {
-            Context context = getContext();
-            if (context != null && context instanceof Activity) {
-                ((Activity) context).finish();
-            }
-        }
+//        if (getChildView() != null && getChildView().getLeft() > 0) {
+//            canvas.clipRect(0, 0, getChildView().getLeft(), getChildView().getHeight());
+//            canvas.drawColor(Color.TRANSPARENT);
+//        }
+//        if (getChildView().getLeft() > 0 && getChildView().getLeft() >= getChildView().getWidth() + getChildView().getPaddingLeft() + getChildView().getPaddingBottom()) {
+//            Context context = getContext();
+//            if (context != null && context instanceof Activity) {
+//                ((Activity) context).finish();
+//            }
+//        }
         return result;
     }
 
